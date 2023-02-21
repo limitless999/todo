@@ -1,34 +1,59 @@
+/* Set the background color of the body */
 body {
-  font-family: sans-serif;
+  background-color: #f2f2f2;
 }
 
-h1 {
+/* Set the font family and font size of all text */
+* {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* Style the header */
+header {
+  background-color: #333;
+  color: #fff;
   text-align: center;
+  padding: 10px;
 }
 
-form {
-  margin: 1rem 0;
-  display: flex;
-  align-items: center;
+/* Style the input field and button */
+input[type=text], button {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
 }
 
-label {
-  margin-right: 1rem;
+input[type=text] {
+  width: 70%;
 }
 
 button {
-  margin-left: 1rem;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-#current-tasks li {
+  width: 25%;
+  background-color: #4CAF50;
+  color: #fff;
   cursor: pointer;
 }
 
-#completed-tasks li {
-  text-decoration: line-through;
+/* Style the first section */
+section:nth-child(1) {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+/* Style the second section */
+section:nth-child(2) {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+/* Style the list items in the second section */
+section:nth-child(2) li {
+  margin: 5px 0;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
