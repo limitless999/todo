@@ -1,18 +1,15 @@
-const newTaskForm = document.getElementById('new-task-form');
-const newTaskInput = document.getElementById('new-task');
-const currentTasksList = document.getElementById('current-tasks');
-const completedTasksList = document.getElementById('completed-tasks');
+function moveTask() {
+  // Get the value of the task input field
+  var task = document.getElementById("taskInput").value;
 
-newTaskForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const newTask = document.createElement('li');
-  newTask.innerText = newTaskInput.value;
-  currentTasksList.appendChild(newTask);
-  newTaskInput.value = '';
-});
+  // Create a new list item element
+  var li = document.createElement("li");
+  li.textContent = task;
 
-currentTasksList.addEventListener('click', (event) => {
-  if (event.target.tagName === 'LI') {
-    completedTasksList.appendChild(event.target);
-  }
-});
+  // Add the list item to the second section
+  var ul = document.getElementById("taskList");
+  ul.appendChild(li);
+
+  // Clear the task input field
+  document.getElementById("taskInput").value = "";
+}
